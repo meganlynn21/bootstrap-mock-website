@@ -1,4 +1,5 @@
-
+/* This makes it so the womans head underneath what you'll learn 
+has space in between that and those links up top on the right*/
 body::before {
     display:block;
     content: '';

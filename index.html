@@ -1,89 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang = "en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset = "UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel = "stylesheet" href = "style.css">
   <!-- Copy and paste this from mapbox.com url is https://www.mapbox.com/install/js/cdn-install/
   This is the CSS needed to insert map-->
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Copy and paste this here to use bootstrap for the CSS part-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+  crossorigin="anonymous">
+  <!--Copy and paste this link for Bootstrap Icons font stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <title>Landing Page</title>
 </head>
-
 <body>
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-    <div class="container">
-      <a href="#" class="navbar-brand">Frontend Bootcamp</a>
+    <!--Navbar-->
+    <!--The py-3 gives padding you can do py-4 or whatever 
+        you need depending on ho wmuch space you need in between something-->
+        <!-- "fixed-top" makes it so the navabr stays in place when you use it to scroll-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+     <div class="container">
+         <a href="#" class = "navbar-brand">Frontend Bootcamp</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=#navmenu>
+        <button 
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse" 
+        data-bs-target=#navmenu
+        >
         <span class="navbar-toggler-icon"></span>
-      </button>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="#learn" class="nav-link">What You'll Learn</a>
-          </li>
-          <li class="nav-item">
-            <a href="#questions" class="nav-link">Questions</a>
-          </li>
-          <li class="nav-item">
-            <a href="#instructors" class="nav-link">Instructors</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!--Showcase-->
-  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    <div class="container">
-      <div class="d-sm-flex align-items-center
+         <div class="collapse navbar-collapse" id="navmenu">
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a href="#learn" class="nav-link">What You'll Learn</a>
+            </li>
+            <li class="nav-item">
+                <a href="#questions" class="nav-link">Questions</a>
+            </li>
+            <li class="nav-item">
+                <a href="#instructors" class="nav-link">Instructors</a>
+            </li>
+         </ul>
+        </div>
+     </div>
+    </nav>
+    <!--Showcase-->
+    <!--p-lg-0 means that the padding(which is p-5 in this line) only shows on large screens
+    pt-lg-5  means padding top on large screens only this will push everything down-->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <!--The “d-sm-flex” makes flex containers for everything in that container 
+                the sm part makes it so it is not flex when it goes to a mobile screen
+                 it will switch to columns instead of rows. -->
+            <div class="d-sm-flex align-items-center
             justify-content-between">
-        <div>
-          <h1>Become a <span class="span text-warning"> Web Developer
-            </span></h1>
-          <p class="lead my-4">
-            We focus on teaching our students the fundamentals of the latest
-            and greatest technologies to prepare them for their first dev role
-          </p>
-          <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Start the enrollment
-          </button>
-        </div>
-        <img class="img-fluid w-50 d-none d-sm-block"
-          src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/showcase.svg"
-          alt="" />
-      </div>
-    </div>
-  </section>
+                <div>
+                    <!--span text-warning makes the text a different color -->
+                    <h1>Become a <span class="span text-warning"> Web Developer
+                     </span></h1>
+                     <!--"lead" makes text smaller "my-4" makes more space in between things-->
+                     <p class ="lead my-4">
+                        We focus on teaching our students the fundamentals of the latest
+                        and greatest technologies to prepare them for their first dev role
+                     </p>
+                     <!--•	The btn-lg part makes it large and btn-primary makes the color blue-->
+                     <button class="btn btn-primary btn-lg" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#enroll"
+                     >Start the enrollment
+                    </button>
+                   </div>
+                   <!--“img-fluid” class makes it so image does not overflow 
+                    the container you can also do “img-fluid w-50” and that will make it 
+                    so picture is smaller changes the width-->
+                    <!--The d-none d-sm-block makes it so the image doesn’t show at all 
+                        when you are on mobile it only shows on bigger screens-->
+                   <img class="img-fluid w-50 d-none d-sm-block"src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/showcase.svg" alt=""/>
+                </div>
+            </div>
+    </section>
 
-  <!--Newsletter-->
-  <section class="bg-primary text-light p-5">
+    <!--Newsletter-->
+    <!--This makes default color blue "bg-primary" the "text-light" makes text white-->
+    <section class="bg-primary text-light p-5">
     <div class="container">
-      <div class="d-md-flex justify-content-between align-items-center">
-        <h3 class="mb-3 mb-md-0">Sign up for our Newsletter</h3>
-        <div class="input-group news-input">
-          <input type="text" class="form-control" placeholder="Enter Email" />
-          <button class="btn btn-dark btn-lg" type="button">Submit</button>
+        <!--This is makes it a flex box container-->
+        <div class="d-md-flex justify-content-between align-items-center">
+            <!--mb-3 means margin bottom 3, mb-md-0 means only do this on medium sized screens-->
+            <h3 class="mb-3 mb-md-0">Sign up for our Newsletter</h3>
+            <div class="input-group news-input">
+                <input type="text" class="form-control" placeholder="Enter Email" />
+                <button class="btn btn-dark btn-lg" type="button">Submit</button>
+              </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!--Boxes using grid-->
-  <section class="p-5">
+<!--Boxes using grid-->
+<section class="p-5">
     <div class="container">
-      <div class="row text-center g-4">
-        <div class="col-md">
-          <div class="card bg-dark text-light">
-            <div class="card-body text-center">
-              <div class="h1 mb-3">
+        <!-- "g-4" gives gap all the way around between items in this case it will do a gap between the icons
+        virtual, hybrid, and person-->
+        <div class="row text-center g-4">
+        <!--"col-md" adds column on medium screens and up. Reason we add -md to it is because
+        we do not want it to be like that when the screen is small for this-->
+            <div class="col-md">
+            <!--This creates a card-->
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                  <!--This h1 class will make the laptop icon bigger(will be size of a h1 header)-->
+                  <div class="h1 mb-3">
+                <!--This creates a laptop icon-->
                 <i class="bi. bi-laptop"></i>
+<<<<<<< HEAD
+                  </div>
+                  <h3 class="card-title mb-3">Virtual</h3>
+                  <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Nemo cumque illum, deleniti facilis esse magni?
+                  </p>
+                  <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+=======
               </div>
               <h3 class="card-title mb-3">Virtual</h3>
               <p class="card-text">
@@ -91,9 +135,46 @@
                 We offer live coding sessions with our experienced instructors.
               </p>
               <a href="#" class="btn btn-primary">Read more</a>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
             </div>
-          </div>
+            <div class="col-md"> <!--This creates a card-->
+                <div class="card bg-secondary text-light">
+                  <div class="card-body text-center">
+                      <!--This h1 class will make the lperson icon bigger(will be size of a h1 header)-->
+                      <div class="h1 mb-3">
+                    <!--This creates a person icon-->
+                    <i class="bi bi-person-square"></i>
+                      </div>
+                      <h3 class="card-title mb-3">Hybrid</h3>
+                      <p class="card-text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           Nemo cumque illum, deleniti facilis esse magni?
+                      </p>
+                      <a href="#" class="btn btn-dark">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md"> 
+                <!--This creates a card-->
+                <div class="card bg-dark text-light">
+                  <div class="card-body text-center">
+                      <!--This h1 class will make the people icon bigger(will be size of a h1 header)-->
+                      <div class="h1 mb-3">
+                    <!--This creates a people icon-->
+                    <i class="bi. bi-people"></i>
+                      </div>
+                      <h3 class="card-title mb-3">In Person</h3>
+                      <p class="card-text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           Nemo cumque illum, deleniti facilis esse magni?
+                      </p>
+                      <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
         </div>
+<<<<<<< HEAD
+=======
         <div class="col-md">
           <div class="card bg-secondary text-light">
             <div class="card-body text-center">
@@ -125,18 +206,35 @@
           </div>
         </div>
       </div>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
     </div>
-  </section>
+</section>
 
-  <!-- Learn Sections -->
-  <section id="learn" class="p-5">
+<!-- Learn Sections -->
+<section id="learn" class="p-5">
     <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md">
-          <img
-            src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/fundamentals.svg"
-            class="img-fluid" alt="">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md">
+                <img src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/fundamentals.svg" class="img-fluid"alt="">
+            </div>
+            <div class="col-md p-5">
+                <h2>Learn the Fundamentals</h2>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Earum nostrum placeat, repellendus obcaecati id hic.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Officiis reprehenderit cumque voluptates ratione eligendi?
+                   Omnis harum molestiae quae temporibus. Itaque nesciunt officiis, velit saepe eos dolorum facilis.
+                   Vero, voluptate quos?
+                </p>
+                <a href="#" class="btn btn-light mt-3">
+                <i class="bi bi-chevron-right"></i>Read More
+                </a>
+            </div>
         </div>
+<<<<<<< HEAD
+=======
         <div class="col-md p-5">
           <h2>Learn the Fundamentals</h2>
           <p class="lead">
@@ -151,11 +249,33 @@
           </a>
         </div>
       </div>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
     </div>
-  </section>
+</section>
 
-  <section id="learn" class="p-5 bg-dark text-light">
+<section id="learn" class="p-5 bg-dark text-light">
     <div class="container">
+<<<<<<< HEAD
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md p-5">
+                <h2>Learn React</h2>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Earum nostrum placeat, repellendus obcaecati id hic.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Officiis reprehenderit cumque voluptates ratione eligendi?
+                   Omnis harum molestiae quae temporibus. Itaque nesciunt officiis, velit saepe eos dolorum facilis.
+                   Vero, voluptate quos?
+                </p>
+                <a href="#" class="btn btn-light mt-3">
+                <i class="bi bi-chevron-right"></i>Read More
+                </a>
+            </div>
+            <div class="col-md">
+                <img src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/react.svg" class="img-fluid"alt="">
+            </div>
+=======
       <div class="row align-items-center justify-content-between">
         <div class="col-md p-5">
           <h2>Learn React</h2>
@@ -171,21 +291,156 @@
           <a href="#" class="btn btn-light mt-3">
             <i class="bi bi-chevron-right"></i>Read More
           </a>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
         </div>
-        <div class="col-md">
-          <img
-            src="https://raw.githubusercontent.com/bradtraversy/bootstrap-bootcamp-website/7656406f5e7b5cb1ac5879df8fd93f1182e215bf/img/react.svg"
-            class="img-fluid" alt="">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Question Accordion -->
-  <section id="questions" class="p-5"></section>
-  <div class="container">
+<!-- Question Accordion -->
+<section id="questions" class="p-5"></section>
+<div class="container">
     <h2 class="text-center mb-4">Frequently Asked Questions</h2>
     <div class="accordion accordion-flush" id="questions">
+<<<<<<< HEAD
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#question-one"
+            >
+              Where exactly are you located?
+            </button>
+          </h2>
+          <div
+            id="question-one"
+            class="accordion-collapse collapse"
+            data-bs-parent="#questions"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              beatae fuga animi distinctio perspiciatis adipisci velit maiores
+              totam tempora accusamus modi explicabo accusantium consequatur,
+              praesentium rem quisquam molestias at quos vero. Officiis ad
+              velit doloremque at. Dignissimos praesentium necessitatibus
+              natus corrupti cum consequatur aliquam! Minima molestias iure
+              quam distinctio velit.
+            </div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#question-two"
+            >
+              How much does it cost to attend?
+            </button>
+          </h2>
+          <div
+            id="question-two"
+            class="accordion-collapse collapse"
+            data-bs-parent="#questions"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              beatae fuga animi distinctio perspiciatis adipisci velit maiores
+              totam tempora accusamus modi explicabo accusantium consequatur,
+              praesentium rem quisquam molestias at quos vero. Officiis ad
+              velit doloremque at. Dignissimos praesentium necessitatibus
+              natus corrupti cum consequatur aliquam! Minima molestias iure
+              quam distinctio velit.
+            </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#question-three"
+            >
+              What do I need to Know?
+            </button>
+          </h2>
+          <div
+            id="question-three"
+            class="accordion-collapse collapse"
+            data-bs-parent="#questions"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              beatae fuga animi distinctio perspiciatis adipisci velit maiores
+              totam tempora accusamus modi explicabo accusantium consequatur,
+              praesentium rem quisquam molestias at quos vero. Officiis ad
+              velit doloremque at. Dignissimos praesentium necessitatibus
+              natus corrupti cum consequatur aliquam! Minima molestias iure
+              quam distinctio velit.
+            </div>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#question-four"
+            >
+              How Do I sign up?
+            </button>
+          </h2>
+          <div
+            id="question-four"
+            class="accordion-collapse collapse"
+            data-bs-parent="#questions"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              beatae fuga animi distinctio perspiciatis adipisci velit maiores
+              totam tempora accusamus modi explicabo accusantium consequatur,
+              praesentium rem quisquam molestias at quos vero. Officiis ad
+              velit doloremque at. Dignissimos praesentium necessitatibus
+              natus corrupti cum consequatur aliquam! Minima molestias iure
+              quam distinctio velit.
+            </div>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#question-five"
+            >
+              Do you help me find a job?
+            </button>
+          </h2>
+          <div
+            id="question-five"
+            class="accordion-collapse collapse"
+            data-bs-parent="#questions"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              beatae fuga animi distinctio perspiciatis adipisci velit maiores
+              totam tempora accusamus modi explicabo accusantium consequatur,
+              praesentium rem quisquam molestias at quos vero. Officiis ad
+              velit doloremque at. Dignissimos praesentium necessitatibus
+              natus corrupti cum consequatur aliquam! Minima molestias iure
+              quam distinctio velit.
+            </div>
+=======
       <!-- Item 1 -->
       <div class="accordion-item">
         <h2 class="accordion-header">
@@ -255,14 +510,111 @@
           That is our main goal! We will help you find job after graduating from the Bootcamp. We 
           will help you develop a portfolio to show in an interview and we will give you the skills you need
           to pass the interview and also help with your resume
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
           </div>
         </div>
       </div>
     </div>
-  </div>
   </section>
 <!-- Instructors -->
   <section id="instructors" class="p-5 bg-primary">
+<<<<<<< HEAD
+      <div class="container">
+          <h2 class="text-center text-white">Our Instructors</h2>
+          <p class="lead text-center text-white mb-5">
+            Our instructors all have 5+ years working as a web developer in the
+            industry
+          </p>
+          <div class="row g-4">
+              <!-- The "col-md-6" makes it so on medium sized screens you will hav 2 columns
+            In a grid there is 12 columns total and we only want to take half of that therefore we use the number 6
+            On large screens we want i to take 3 of the 12 columns so that we have 4 columns so we do
+            "col-lg-3"-->
+              <div class="col-md-6 col-lg-3">
+                  <!-- "bg-light gives it a light gray background" -->
+                  <div class="card bg-light">
+                      <div class="card-body text-center">
+                          <!-- This img link gives you a random picture of a man or woman wh9chever you choose
+                          In class= "rounded-circle" That makes the image round-->
+                          <img 
+                          src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle" alt=""/>
+                          <h3 class="card-title mb-3">John Doe</h3>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                         Sunt voluptatum quisquam architecto soluta, totam earum.</p>
+                         <!-- The "bi bi-twitter" puts a twitter icon(the other ones do other social medias)
+                             and the mx-1 adds margin on x axis -->
+                         <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                         <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                         <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                         <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <!--Second person-->
+              <div class="col-md-6 col-lg-3">
+                <!-- "bg-light gives it a light gray background" -->
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <!-- This img link gives you a random picture of a man or woman wh9chever you choose
+                        In class= "rounded-circle" That makes the image round-->
+                        <img 
+                        src="https://randomuser.me/api/portraits/women/11.jpg" class="rounded-circle" alt=""/>
+                        <h3 class="card-title mb-3">Jane Doe</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Sunt voluptatum quisquam architecto soluta, totam earum.</p>
+                       <!-- The "bi bi-twitter" puts a twitter icon(the other ones do other social medias)
+                           and the mx-1 adds margin on x axis -->
+                       <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>      
+            <!-- Third Person -->    
+             <div class="col-md-6 col-lg-3">
+                <!-- "bg-light gives it a light gray background" -->
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <!-- This img link gives you a random picture of a man or woman wh9chever you choose
+                        In class= "rounded-circle" That makes the image round-->
+                        <img 
+                        src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle" alt=""/>
+                        <h3 class="card-title mb-3">Steve Smith</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Sunt voluptatum quisquam architecto soluta, totam earum.</p>
+                       <!-- The "bi bi-twitter" puts a twitter icon(the other ones do other social medias)
+                           and the mx-1 adds margin on x axis -->
+                       <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div> 
+            <!-- Fourth Person -->         
+             <div class="col-md-6 col-lg-3">
+                <!-- "bg-light gives it a light gray background" -->
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <!-- This img link gives you a random picture of a man or woman wh9chever you choose
+                        In class= "rounded-circle" That makes the image round-->
+                        <img 
+                        src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle" alt=""/>
+                        <h3 class="card-title mb-3">Sara Smith</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Sunt voluptatum quisquam architecto soluta, totam earum.</p>
+                       <!-- The "bi bi-twitter" puts a twitter icon(the other ones do other social medias)
+                           and the mx-1 adds margin on x axis -->
+                       <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                       <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+=======
     <div class="container">
       <h2 class="text-center text-white">Our Instructors</h2>
       <p class="lead text-center text-white mb-5">
@@ -332,18 +684,19 @@
             </div>
           </div>
         </div>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
       </div>
-    </div>
   </section>
 
-  <!-- Contact & Map -->
-  <section class="p-5">
+<!-- Contact & Map -->
+<section class="p-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md">
           <h2 class="text-center mb-4">Contact Info</h2>
           <ul class="list-group list-group-flush lead">
             <li class="list-group-item">
+            <!--fw-bold means font weight bold-->
               <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
             </li>
             <li class="list-group-item">
@@ -364,27 +717,41 @@
         </div>
         <!-- Map -->
         <div class="col-md">
-          <div id="map"></div>
+            <div id="map"></div>
         </div>
-      </div>
-    </div>
-  </section>
+     </div>
+ </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="p-5 bg-dark text-white text-center 
+<!-- Footer -->
+<footer class="p-5 bg-dark text-white text-center 
 position-relative">
+<<<<<<< HEAD
+<div class="container">
+    <p class="lead">Copyright & copy; 2021 Frontend Bootcamp</p>
+    <a href="#" class="position-absolute bottom-0 end-0 p-5">
+    <!-- This makes an arrow on the bottom right in the footer
+     it allows the user to click it so they can go back up the page-->
+    <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+=======
     <div class="container">
       <p class="lead">Copyright@2021 Frontend Bootcamp</p>
       <a href="#" class="position-absolute bottom-0 end-0 p-5">
         <i class="bi bi-arrow-up-circle h1"></i>
       </a>
+>>>>>>> 1862476b55cd2a480e6bf02da2fb149c69f14137
 
-    </div>
+</div>
 
-  </footer>
+</footer>
 
-  <!-- Modal -->
-  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enroll" aria-hidden="true">
+<!-- Modal -->
+<!-- You can go to
+     https://getbootstrap.com/docs/5.1/components/modal/
+     and go to live demo to copy this code for the modal make sure to change id 
+     so it matches the id you need it to match-->
+<div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enroll" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -392,33 +759,33 @@ position-relative">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="lead">Fill out this form and we will get back to you</p>
-          <form>
-            <div class="mb-3">
-              <label for="first-name" class="col-form-label">
-                First Name:
-              </label>
-              <input type="text" class="form-control" id="first-name">
-            </div>
-            <div class="mb-3">
-              <label for="last-name" class="col-form-label">
-                Last Name:
-              </label>
-              <input type="text" class="form-control" id="last-name">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="col-form-label">
-                Email:
-              </label>
-              <input type="text" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="col-form-label">
-                Phone:
-              </label>
-              <input type="text" class="form-control" id="phone">
-            </div>
-          </form>
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+                <div class="mb-3">
+                    <label for="first-name" class="col-form-label">
+                        First Name:
+                    </label>
+                    <input type="text" class="form-control" id="first-name">
+                </div>
+                <div class="mb-3">
+                    <label for="last-name" class="col-form-label">
+                        Last Name:
+                    </label>
+                    <input type="text" class="form-control" id="last-name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="col-form-label">
+                        Email:
+                    </label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="col-form-label">
+                        Phone:
+                    </label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+            </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -429,29 +796,31 @@ position-relative">
   </div>
 
 
-  <!--Copy and paste this here to use javascript for Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <!--Copy and paste this here to use javascript for Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+</script>
 
-  <!--Copy and paste this here to use javascript for Mapbox this is url
+<!--Copy and paste this here to use javascript for Mapbox this is url
 https://www.mapbox.com/install/js/cdn-install/
 -->
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-  <!-- This is copied from 
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<!-- This is copied from 
     https://www.mapbox.com/install/js/cdn-add/
 It is for the access token for mapbox -->
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW5sa2V5ZXMwMjAzIiwiYSI6ImNreGZlajlyNDA1NWoyeG1sa2VzOTVzN3cifQ.XqwHgNoqSYweoyYnJgGTew';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      //center[] takes the latitude and longitude
-      center: [-71.060982, 42.35725],
-      //zoom takes the zoom level of the map
-      zoom: 18,
-    });
-  </script>
+<script>
+ mapboxgl.accessToken = 'pk.eyJ1IjoibWVnYW5sa2V5ZXMwMjAzIiwiYSI6ImNreGZlajlyNDA1NWoyeG1sa2VzOTVzN3cifQ.XqwHgNoqSYweoyYnJgGTew';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+//center[] takes the latitude and longitude
+center: [-71.060982, 42.35725],
+//zoom takes the zoom level of the map
+zoom: 18,
+});
+</script>
 </body>
+</html> 
 
-</html>
+      
